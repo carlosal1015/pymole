@@ -2,7 +2,10 @@
 # process itself. Being able to do this was the original reason to
 # introduce pyproject.toml
 [build-system]
-requires = ["setuptools >=61", "setuptools_scm >=7"]
+requires = [
+    "setuptools >=61",
+    "setuptools_scm >=7",
+]
 build-backend = "setuptools.build_meta"
 
 # This section provides general project metadata that is used across
@@ -12,7 +15,9 @@ build-backend = "setuptools.build_meta"
 name = "pymole"
 description = "Python Mimetic Operators Library Enhanced"
 readme = "README.md"
-maintainers = [{ name = "Carlos Aznarán", email = "caznaranl@uni.pe" }]
+maintainers = [
+    { name = "Carlos Aznarán", email = "caznaranl@uni.pe" },
+]
 dynamic = ["version"]
 requires-python = ">=3.12"
 license = { text = "GPL-3.0" }
@@ -21,10 +26,16 @@ classifiers = [
     "Operating System :: OS Independent",
     "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
 ]
-dependencies = ["scipy"]
+dependencies = [
+    "scipy>=1.15"
+]
 
 [project.optional-dependencies]
-tests = ["pytest", "pytest-cov", "nbval"]
+tests = [
+    "pytest",
+    "pytest-cov",
+    "nbval",
+]
 docs = [
     "ipykernel",
     "nbsphinx",
@@ -39,7 +50,9 @@ docs = [
 # options. For a full reference of available options, check the overview
 # at https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html
 [tool.setuptools]
-packages = ["pymole"]
+packages = [
+    "pymole",
+]
 
 # Configure setuptools_scm, which extracts the version number from
 # the version control system. For more information see its documentation:
@@ -51,4 +64,7 @@ write_to = "pymole/_version.py"
 
 # The following is the configuration for the pytest test suite
 [tool.pytest.ini_options]
-testpaths = ["tests", "notebooks"]
+testpaths = [
+    "tests",
+    "notebooks",
+]
