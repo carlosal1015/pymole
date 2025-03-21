@@ -18,8 +18,8 @@ def weightsP2D(k, m, dx, n, dy):
         :obj:`ndarray` containing weights of P
     """
 
-    Im = sparse.eye(m, dtype=np.float, format="csr")
-    In = sparse.eye(n, dtype=np.float, format="csr")
+    Im = sparse.eye(m, dtype=float, format="csr")
+    In = sparse.eye(n, dtype=float, format="csr")
 
     Pm = np.diag(weightsP1D(k, m, dx))
     Pn = np.diag(weightsP1D(k, n, dy))

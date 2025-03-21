@@ -27,6 +27,7 @@ classifiers = [
     "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
 ]
 dependencies = [
+    "numpy>=2.2.0",
     "scipy>=1.15"
 ]
 

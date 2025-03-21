@@ -22,7 +22,7 @@ def interpol1D(m, c):
     n_rows = m + 1
     n_cols = m + 2
 
-    I = csr_matrix((n_rows, n_cols), dtype=np.float)
+    I = csr_matrix((n_rows, n_cols), dtype=float)
 
     I[0, 0] = 1.0
     I[-1, -1] = 1.0

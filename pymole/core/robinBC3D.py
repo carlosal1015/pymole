@@ -30,11 +30,11 @@ def robinBC3D(k, m, dx, n, dy, o, dz, a, b):
     Bn = robinBC1D(k, n, dy, a, b)
     Bo = robinBC1D(k, o, dz, a, b)
 
-    Im = sparse.eye(m + 2, dtype=np.float, format="csr")
+    Im = sparse.eye(m + 2, dtype=float, format="csr")
 
-    In = sparse.eye(n + 2, dtype=np.float, format="csr")
+    In = sparse.eye(n + 2, dtype=float, format="csr")
 
-    Io = sparse.eye(o + 2, dtype=np.float, format="csr")
+    Io = sparse.eye(o + 2, dtype=float, format="csr")
     Io[0, 0] = 0.0
     Io[-1, -1] = 0.0
 

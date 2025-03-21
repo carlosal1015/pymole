@@ -19,8 +19,8 @@ def mimeticB1D(k, m, dx):
         :obj:`ndarray` containing discrete boundary operator
     """
 
-    Q = csr_matrix(np.diag(weightsQ1D(k, m, dx)), dtype=np.float)
-    P = csr_matrix(np.diag(weightsP1D(k, m, dx)), dtype=np.float)
+    Q = csr_matrix(np.diag(weightsQ1D(k, m, dx)), dtype=float)
+    P = csr_matrix(np.diag(weightsP1D(k, m, dx)), dtype=float)
 
     D = div1D(k, m, dx)
     G = grad1D(k, m, dx)

@@ -21,11 +21,11 @@ def robinBC1D(k, m, dx, a, b):
 
     # Check if a & b are non zeros and proceed accordingly
 
-    A = csr_matrix((m + 2, m + 2), dtype=np.float)
+    A = csr_matrix((m + 2, m + 2), dtype=float)
     A[0, 0] = a
     A[-1, -1] = a
 
-    B = csr_matrix((m + 2, m + 1), dtype=np.float)
+    B = csr_matrix((m + 2, m + 1), dtype=float)
     B[0, 0] = -b
     B[-1, -1] = b
 

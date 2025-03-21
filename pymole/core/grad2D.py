@@ -22,11 +22,11 @@ def grad2D(k, m, dx, n, dy):
     Gx = grad1D(k, m, dx)
     Gy = grad1D(k, n, dy)
 
-    Im = csr_matrix((m + 2, m), dtype=np.float)
-    In = csr_matrix((n + 2, n), dtype=np.float)
+    Im = csr_matrix((m + 2, m), dtype=float)
+    In = csr_matrix((n + 2, n), dtype=float)
 
-    Im[1 : m + 1, :] = sparse.eye(m, m, dtype=np.float, format="csr")
-    In[1 : n + 1, :] = sparse.eye(n, n, dtype=np.float, format="csr")
+    Im[1 : m + 1, :] = sparse.eye(m, m, dtype=float, format="csr")
+    In[1 : n + 1, :] = sparse.eye(n, n, dtype=float, format="csr")
 
     Sx = sparse.kron(In.T, Gx, format="csr")
     Sy = sparse.kron(Gy, Im.T, format="csr")

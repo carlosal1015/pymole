@@ -22,7 +22,7 @@ def interpolD1D(m, c):
     n_rows = m + 2
     n_cols = m + 1
 
-    I = csr_matrix((n_rows, n_cols), dtype=np.float)
+    I = csr_matrix((n_rows, n_cols), dtype=float)
 
     I[0, 0] = 1.0
     I[-1, -1] = 1.0
@@ -30,7 +30,7 @@ def interpolD1D(m, c):
     """
     Average between two continuous cells
     """
-    avg = np.array([c, 1.0 - c], dtype=np.float)
+    avg = np.array([c, 1.0 - c], dtype=float)
 
     j = 0
     for i in range(1, n_cols):

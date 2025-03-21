@@ -21,13 +21,13 @@ def div3D(k, m, dx, n, dy, o, dz):
         :obj:`ndarray` containing discrete divergence operator
     """
 
-    Im = csr_matrix((m + 2, m), dtype=np.float)
-    In = csr_matrix((n + 2, n), dtype=np.float)
-    Io = csr_matrix((o + 2, o), dtype=np.float)
+    Im = csr_matrix((m + 2, m), dtype=float)
+    In = csr_matrix((n + 2, n), dtype=float)
+    Io = csr_matrix((o + 2, o), dtype=float)
 
-    Im[1 : m + 1, :] = sparse.eye(m, m, dtype=np.float, format="csr")
-    In[1 : n + 1, :] = sparse.eye(n, n, dtype=np.float, format="csr")
-    Io[1 : o + 1, :] = sparse.eye(o, o, dtype=np.float, format="csr")
+    Im[1 : m + 1, :] = sparse.eye(m, m, dtype=float, format="csr")
+    In[1 : n + 1, :] = sparse.eye(n, n, dtype=float, format="csr")
+    Io[1 : o + 1, :] = sparse.eye(o, o, dtype=float, format="csr")
 
     Dx = div1D(k, m, dx)
     Dy = div1D(k, n, dy)

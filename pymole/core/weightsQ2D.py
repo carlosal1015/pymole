@@ -15,7 +15,7 @@ def weightsQ2D(m, n, d):
         :obj:`ndarray` containing weights of Q
     """
 
-    return d * np.ones((m + 2) * (n + 2), dtype=np.float)
+    return d * np.ones((m + 2) * (n + 2), dtype=float)
 
 
 if __name__ == "__main__":

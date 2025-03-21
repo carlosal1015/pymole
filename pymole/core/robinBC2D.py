@@ -24,9 +24,9 @@ def robinBC2D(k, m, dx, n, dy, a, b):
     Bm = robinBC1D(k, m, dx, a, b)
     Bn = robinBC1D(k, n, dy, a, b)
 
-    Im = sparse.eye(m + 2, dtype=np.float, format="csr")
+    Im = sparse.eye(m + 2, dtype=float, format="csr")
 
-    In = sparse.eye(n + 2, dtype=np.float, format="csr")
+    In = sparse.eye(n + 2, dtype=float, format="csr")
     In[0, 0] = 0.0
     In[-1, -1] = 0.0
 

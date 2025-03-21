@@ -24,7 +24,7 @@ def grad1D(k, m, dx):
     n_rows = m + 1
     n_cols = m + 2
 
-    G = csr_matrix((n_rows, n_cols), dtype=np.float)
+    G = csr_matrix((n_rows, n_cols), dtype=float)
 
     """
     Fill the middle of G
@@ -39,7 +39,7 @@ def grad1D(k, m, dx):
     """
     First-order derivative
     """
-    b = np.zeros((k, 1), dtype=np.float)
+    b = np.zeros((k, 1), dtype=float)
     b[k - 2, None] = 1.0
 
     """
@@ -57,7 +57,7 @@ def grad1D(k, m, dx):
     """
     p = int(k / 2)
     q = int(k + 1)
-    A = csr_matrix((p, q), dtype=np.float)
+    A = csr_matrix((p, q), dtype=float)
     # For each row of A
     for i in range(p):
         """
@@ -66,7 +66,7 @@ def grad1D(k, m, dx):
         """
         neighbors = np.insert(np.arange(0.5 - i, q - i - 0.5), 0, -i)
         V = np.transpose(np.vander(neighbors))
-        b = np.zeros((q, 1), dtype=np.float)
+        b = np.zeros((q, 1), dtype=float)
         b[q - 2, None] = 1.0
         coeffs = np.transpose(np.linalg.solve(V, b))
         A[i, 0:q] = coeffs
@@ -80,8 +80,8 @@ def grad1D(k, m, dx):
     """
     Permutation matrices
     """
-    Pp = csr_matrix(np.fliplr(identity(p).toarray()), dtype=np.float)
-    Pq = csr_matrix(np.fliplr(identity(q).toarray()), dtype=np.float)
+    Pp = csr_matrix(np.fliplr(identity(p).toarray()), dtype=float)
+    Pq = csr_matrix(np.fliplr(identity(q).toarray()), dtype=float)
 
     """
     Construct A' (lower-right corner of G)
