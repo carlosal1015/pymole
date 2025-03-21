@@ -7,10 +7,13 @@
 
 ## Installation
 
-The Python package `pymole` can be installed from PyPI:
+The Python package `pymole` can be installed from GitHub:
 
-```
-python -m pip install pymole
+```console
+uv init
+uv venv
+source .venv/bin/activate
+uv pip install git+https://github.com/carlosal1015/pymole.git#egg=pymole
 ```
 
 ## Development installation
@@ -18,7 +21,7 @@ python -m pip install pymole
 If you want to contribute to the development of `pymole`, we recommend
 the following editable installation from this repository:
 
-```
+```console
 git clone https://github.com/carlosal1015/pymole
 cd pymole
 python -m pip install --editable .[tests]
@@ -26,9 +29,19 @@ python -m pip install --editable .[tests]
 
 Having done so, the test suite can be run using `pytest`:
 
-```
+```console
 python -m pytest
 ```
+## Project lineage
+
+This project continues development from the original [pymole](https://github.com/nutrik/pymole)
+repository (May 2018 - October 2018) with:
+
+- 🚀 Modern Python 3.13+ support
+- ✅ Comprehensive test suite (>90% coverage)
+- 📚 Sphinx documentation
+- 📦 Improved packaging and CI/CD
+- 🧩 Expanded mimetic operator implementations
 
 ## Acknowledgments
 
