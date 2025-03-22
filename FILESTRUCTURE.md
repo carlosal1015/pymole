@@ -5,7 +5,7 @@ This is an explanation of the file structure that the cookiecutter generated for
   * `tests/test_pymole.py` contains the unit tests for the package.
   * `tests/conftest.py` contains testing setup and configuration for `pytest`
   * The `notebooks` directory contains an example Jupyter notebook on how to use `pymole`.
-    This notebook is always executed during `pytest` execution and it is automatically
+    This notebook is always executed during `pytest` execution, and it is automatically
     rendered into the Sphinx documentation.
 * Markdown files with meta information on the project. [Markdown](https://www.markdownguide.org/basic-syntax/) is
   a good language for these files, as it is easy to write and rendered into something beautiful by your git repository
@@ -26,9 +26,9 @@ This is an explanation of the file structure that the cookiecutter generated for
     In the future, `setuptools` will support editable builds purely from `pyproject.toml`
     configuration.
 * Configuration for CI/Code Analysis and documentation services
-  * `.github/workflows/ci.yml` describes the Github Workflow for Continuous
+  * `.github/workflows/ci.yml` describes the GitHub Workflow for Continuous
     integration. For further reading on workflow files, we recommend the
-    [introduction into Github Actions](https://docs.github.com/en/free-pro-team@latest/actions/learn-github-actions/introduction-to-github-actions)
+    [introduction into GitHub Actions](https://docs.github.com/en/free-pro-team@latest/actions/learn-github-actions/introduction-to-github-actions)
     and [the reference of available options](https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-syntax-for-github-actions).
   * `.github/dependabot.yml` configures the DependaBot integration on GitHub that
     allows you to automatically create pull requests for updates of the used actions

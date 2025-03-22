@@ -10,10 +10,10 @@ The following tasks need to be done to get a fully working project:
   * Repository name: `pymole`
   * Workflow name: `pypi.yml`
   * Environment name: not required
-* Enable the integration of Readthedocs with your Git hoster. In the case of Github, this means
-  that you need to login at [Read the Docs](https://readthedocs.org) and click the button
+* Enable the integration of Readthedocs with your Git hoster. In the case of GitHub, this means
+  that you need to log in at [Read the Docs](https://readthedocs.org) and click the button
   *Import a Project*.
 * Enable the integration with `codecov.io` by heading to the [Codecov.io Website](https://codecov.io),
-  log in (e.g. with your Github credentials) and enable integration for your repository. In order to do
+  log in (e.g. with your GitHub credentials) and enable integration for your repository. In order to do
   so, you need to select it from the list of repositories (potentially re-syncing with GitHub). Then, head
   to the "Settings" Tab and select "Global Upload Token". Here, you should select the "not required" option.
