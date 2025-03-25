@@ -37,7 +37,7 @@ python -m pytest
 This project continues development from the original [pymole](https://github.com/nutrik/pymole)
 repository (May 2018 - October 2018) with:
 
-- 🚀 Modern Python 3.13+ support
+- 🚀 Modern Python 3.12+ support
 - ✅ Comprehensive test suite (>90% coverage)
 - 📚 Sphinx documentation
 - 📦 Improved packaging and CI/CD
