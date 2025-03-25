@@ -30,7 +30,9 @@ python -m pip install --editable .[tests]
 Having done so, the test suite can be run using `pytest`:
 
 ```console
-python -m pytest
+uv sync
+uv add pytest --dev
+uv run python -m pytest
 ```
 ## Project lineage
 
