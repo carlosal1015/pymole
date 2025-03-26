@@ -30,10 +30,16 @@ python -m pip install --editable .[tests]
 Having done so, the test suite can be run using `pytest`:
 
 ```console
-uv sync
-uv add pytest --dev
+uv sync --extra=tests
 uv run python -m pytest
 ```
+
+```console
+uv sync --extra=docs
+cd doc
+uv run make html
+```
+
 ## Project lineage
 
 This project continues development from the original [pymole](https://github.com/nutrik/pymole)
