@@ -36,8 +36,7 @@ uv run python -m pytest
 
 ```console
 uv sync --extra=docs
-cd doc
-uv run make html
+uv run sphinx-build doc build
 ```
 
 ## Project lineage
