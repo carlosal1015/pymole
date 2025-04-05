@@ -19,7 +19,7 @@ maintainers = [
     { name = "Carlos Aznarán", email = "caznaranl@uni.pe" },
 ]
 dynamic = ["version"]
-requires-python = ">=3.12"
+requires-python = ">=3.11"
 license = { text = "GPL-3.0" }
 classifiers = [
     "Programming Language :: Python :: 3",

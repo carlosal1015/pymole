@@ -44,7 +44,7 @@ uv run sphinx-build doc build
 This project continues development from the original [pymole](https://github.com/nutrik/pymole)
 repository (May 2018 - October 2018) with:
 
-- 🚀 Modern Python 3.12+ support
+- 🚀 Modern Python 3.11+ support
 - ✅ Comprehensive test suite (>90% coverage)
 - 📚 Sphinx documentation
 - 📦 Improved packaging and CI/CD
