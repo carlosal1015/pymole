@@ -57,7 +57,11 @@ uv run sphinx-build doc build
 pymole fully supports PyPy for enhanced performance. To use with PyPy:
 
 ```console
-pypy -m pip install git+https://github.com/carlosal1015/pymole.git#egg=pymole
+sudo pacman --needed -Syu uv git gcc-fortran blas-openblas
+uv init --python pypy3
+uv venv --python pypy3
+source .venv/bin/activate
+uv pip install git+https://github.com/carlosal1015/pymole.git#egg=pymole
 ```
 
 ## Project lineage
