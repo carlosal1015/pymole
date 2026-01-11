@@ -69,7 +69,7 @@ uv pip install git+https://github.com/carlosal1015/pymole.git#egg=pymole
 This project continues development from the original [pymole](https://github.com/nutrik/pymole)
 repository (May 2018 - October 2018) with:
 
-- 🚀 Modern Python 3.11+ support
+- 🚀 Modern Python 3.12+ support
 - ✅ Comprehensive test suite (>90% coverage)
 - 📚 Sphinx documentation
 - 📦 Improved packaging and CI/CD
